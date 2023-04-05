@@ -8,6 +8,7 @@
              echo ========== Tarjeta $tarjeta ============
              url="http://www.gpssumo.com/movimientos/get_movimientos/"
              url+=$tarjeta
+             url+="/3"
              SALIDA=$(curl $url)
              echo "${tarjeta}":${SALIDA}, >> salida.dat
             #curl $url | jq '.'
